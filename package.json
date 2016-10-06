@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "dev": "lt --port 8765 --subdomain mybabybot & nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +13,8 @@
     "botkit": "^0.2.2",
     "dotenv": "^2.0.0",
     "slackHelper": "git+https://github.com/domocrosby/slackbaby.git"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }

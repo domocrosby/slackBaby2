@@ -5,5 +5,5 @@ dotenv.load();
 var controller = app.configure();
 
 controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+    bot.reply(message, 'Hello You!');
 });
