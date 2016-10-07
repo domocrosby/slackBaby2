@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lt --port 8765 --subdomain mybabybot & nodemon index.js"
+    "dev": "nodemon index.js",
+    "setup-dev": "echo 'CLIENT_ID=\nCLIENT_SECRET=\nPORT=8765' > .env & open .env; npm install",
+    "setup-dev-app": "echo http://$USER.localtunnel.me/oauth | pbcopy & open https://api.slack.com/apps/new",
+    "dev-auth": "lt --port 8765 --subdomain $USER & nodemon index.js & open http://$USER.localtunnel.me/login"
   },
   "author": "",
   "license": "ISC",
