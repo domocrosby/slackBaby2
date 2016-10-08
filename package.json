@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "setup-dev": "echo 'CLIENT_ID=\nCLIENT_SECRET=\nPORT=8765' > .env & open .env; npm install",
+    "CLIENT_ID": "echo 'Enter the apps CLIENT_ID and press [ENTER]: ' && read ID && echo 'CLIENT_ID='$ID > .env",
+    "CLIENT_SECRET": "echo 'Enter the apps CLIENT_SECRET and press [ENTER]: ' && read ID && echo 'CLIENT_SECRET='$ID >> .env",
+    "PORT": "echo 'PORT=8765' >> .env",
+    "setup-dev": "npm run CLIENT_ID && npm run CLIENT_SECRET && npm run PORT && npm install",
     "setup-dev-app": "echo http://$USER.localtunnel.me/oauth | pbcopy & open https://api.slack.com/apps/new",
     "dev-auth": "lt --port 8765 --subdomain $USER & nodemon index.js & open http://$USER.localtunnel.me/login"
   },
@@ -21,3 +24,4 @@
     "nodemon": "^1.10.2"
   }
 }
+
