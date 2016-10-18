@@ -1,4 +1,4 @@
-var app = require('slackHelper');
+var app = require('./libs/helper.js');
 var dotenv = require('dotenv');
 dotenv.load();
 
