@@ -4,23 +4,29 @@
   "description": "-",
   "main": "index.js",
   "scripts": {
+    "--ONGOING--":"-----",
     "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
+    "--SETUP--":"-----",
+    "setup-dev-app": "echo http://$USER.localtunnel.me/oauth | pbcopy & open https://api.slack.com/apps/new",
+    "setup-staging": "npm run CLIENT_ID-staging && npm run CLIENT_SECRET-staging",
+    "setup-staging-app": "echo http://$USER-${PWD##*/}-staging.herokuapp.com/oauth | pbcopy && heroku create $USER-${PWD##*/}-staging && open https://api.slack.com/apps/new ",
+    "dev-auth": "lt --port 8765 --subdomain $USER & nodemon index.js & open http://$USER.localtunnel.me/login",
+    "staging-auth": "git push heroku master && open http://$USER-${PWD##*/}-staging.herokuapp.com/login",
+    "--SCRIPTS--":"-----",
     "CLIENT_ID": "echo 'Enter the apps CLIENT_ID and press [ENTER]: ' && read ID && echo 'CLIENT_ID='$ID > .env",
     "CLIENT_SECRET": "echo 'Enter the apps CLIENT_SECRET and press [ENTER]: ' && read ID && echo 'CLIENT_SECRET='$ID >> .env",
     "PORT": "echo 'PORT=8765' >> .env",
-    "setup-dev": "npm run CLIENT_ID && npm run CLIENT_SECRET && npm run PORT && npm install",
-    "setup-dev-app": "echo http://$USER.localtunnel.me/oauth | pbcopy & open https://api.slack.com/apps/new",
-    "setup-staging": "echo http://$USER-${PWD##*/}-staging.herokuapp.com/oauth | pbcopy && heroku create $USER-${PWD##*/}-staging && open https://api.slack.com/apps/new ",
-    "dev-auth": "lt --port 8765 --subdomain $USER & nodemon index.js & open http://$USER.localtunnel.me/login"
+    "CLIENT_ID-staging": "echo 'Enter the staging apps CLIENT_ID and press [ENTER]: ' && read ID && heroku config:set CLIENT_ID=$ID",
+    "CLIENT_SECRET-staging": "echo 'Enter the staging apps CLIENT_SECRET and press [ENTER]: ' && read ID && heroku config:set CLIENT_SECRET=$ID",
+    "setup-dev": "npm run CLIENT_ID && npm run CLIENT_SECRET && npm run PORT && npm install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "botkit": "^0.2.2",
-    "dotenv": "^2.0.0",
-    "slackHelper": "git+https://github.com/domocrosby/slackbaby.git"
+    "dotenv": "^2.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"
