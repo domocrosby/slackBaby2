@@ -11,11 +11,19 @@ This should be pretty simple
 - To create a staging environment on heroku use "npm run setup-staging-app", this will have saved the default auth address to the clipboard but you will need to enter the name of the app plus staging
 - To configure the staging environment run "npm run setup-staging"
 - to authorize user on staging use "npm run staging-auth"
+Ongoing
+- to save use "npm run git"
+- to push to staging use "npm run stage-git", you will need to run the above first
+
+Mongodb
+- install using brew install mongodb
+- 
 
 
 TODO
-- Sort out git pushing to dev and staging
 - Add mongoDB to dev
+--https://github.com/slackhq/easy-peasy-bot/blob/master/index.js
+--https://github.com/howdyai/botkit-storage-mongo
 - Setup mongoDB in scripts
 - Do some interesting stuff
 - 
