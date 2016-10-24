@@ -8,7 +8,7 @@
     "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "git" : "echo 'Enter commit message and press [ENTER]: ' && read ID && git add . && git commit -m $ID && git push origin master",
+    "git" : "echo 'Enter commit message and press [ENTER]: ' && read ID && git add . && git commit -m '$ID' && git push origin master",
     "git-stage" : "npm run git && git push heroku master",
     "--SETUP--":"-----",
     "setup-dev-app": "echo http://$USER.localtunnel.me/oauth | pbcopy & open https://api.slack.com/apps/new",
