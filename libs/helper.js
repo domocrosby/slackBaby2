@@ -7,6 +7,7 @@
  */
 
 var Botkit = require('botkit');
+var BotkitStorage = require('botkit-storage-mongo');
 
 var _bots = {};
 
@@ -20,19 +21,19 @@ function die(err) {
 }
 
 var config = {};
-if (process.env.MONGOLAB_URI) {
-    var BotkitStorage = require('botkit-storage-mongo');
-    config = {
-        storage: BotkitStorage({mongoUri: process.env.MONGOLAB_URI}),
-    };
-} else {
-    config = {
-        json_file_store: ((process.env.TOKEN)?'./db_slack_bot_ci/':'./db_slack_bot_a/'), //use a different name if an app or CI
-    };
-}
 
 module.exports = {
     configure: function (port, clientId, clientSecret, onInstallation) {
+
+        if (process.env.MONGOLAB_URI) {            
+            config = {
+                storage: BotkitStorage({mongoUri: process.env.MONGOLAB_URI}),
+            };
+        } else {
+            config = {
+                json_file_store: ((process.env.TOKEN)?'./db_slack_bot_ci/':'./db_slack_bot_a/'), //use a different name if an app or CI
+            };
+        }
         var port = process.env.PORT;
         var clientId = process.env.CLIENT_ID;
         var clientSecret = process.env.CLIENT_SECRET;

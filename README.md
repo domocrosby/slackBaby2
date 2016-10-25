@@ -16,15 +16,18 @@ Ongoing
 - to push to staging use "npm run stage-git", you will need to run the above first
 
 Mongodb
-- install using brew install mongodb
-- 
+- install using "brew install mongodb"
+- make directory using "sudo mkdir -p /data/db"
+- give permissions using sudo chown -R `id -un` /data/db
+- run using mongodb, 
+- open another window and use mongo to connect
 
 
 TODO
-- Add mongoDB to dev
---https://github.com/slackhq/easy-peasy-bot/blob/master/index.js
---https://github.com/howdyai/botkit-storage-mongo
-- Setup mongoDB in scripts
+- change default mongo project to be app name
+- setup dev script to run the mongo command as well
+- setup mongo on staging
+- Setup mongoDB in scripts as if it is the default option
 - Do some interesting stuff
 - 
 
