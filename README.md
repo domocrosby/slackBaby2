@@ -2,6 +2,11 @@
 
 This should be pretty simple
 - Install node.js & Heroku
+Mongodb
+- install using "brew install mongodb"
+- make directory using "sudo mkdir -p /data/db"
+- give permissions using sudo chown -R `id -un` /data/db
+
 - Just Fork and clone this repository (if owner then copy and change remote)\
 - Change repository name to the name of the app 
 - To setup a new dev app run "npm run setup-dev-app", this will have saved the default auth address to the clipboard
@@ -15,17 +20,12 @@ Ongoing
 - to save use "npm run git"
 - to push to staging use "npm run stage-git", you will need to run the above first
 
-Mongodb
-- install using "brew install mongodb"
-- make directory using "sudo mkdir -p /data/db"
-- give permissions using sudo chown -R `id -un` /data/db
+
 - run using mongodb, 
 - open another window and use mongo to connect
 
 
 TODO
-- change default mongo project to be app name
-- setup dev script to run the mongo command as well
 - setup mongo on staging
 - Setup mongoDB in scripts as if it is the default option
 - Do some interesting stuff
