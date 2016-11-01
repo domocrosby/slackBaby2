@@ -1,12 +1,12 @@
 # slackBaby2
 
-This should be pretty simple
+Installation
 - Install node.js & Heroku
-Mongodb
 - install using "brew install mongodb"
 - make directory using "sudo mkdir -p /data/db"
 - give permissions using sudo chown -R `id -un` /data/db
 
+Setup
 - Just Fork and clone this repository (if owner then copy and change remote)\
 - Change repository name to the name of the app 
 - To setup a new dev app run "npm run setup-dev"
@@ -16,9 +16,8 @@ Mongodb
 - to push to staging use "npm run stage-git"
 
 TODO
-- test setup in new doc
+
 - Do some interesting stuff
-- 
 
 - Create production app from script
 - Auto pull production mongoDB into staging and 
