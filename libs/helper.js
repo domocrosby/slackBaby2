@@ -25,9 +25,9 @@ var config = {};
 module.exports = {
     configure: function (port, clientId, clientSecret, onInstallation) {
 
-        if (process.env.MONGOLAB_URI) {            
+        if (process.env.MONGODB_URI) {            
             config = {
-                storage: BotkitStorage({mongoUri: process.env.MONGOLAB_URI}),
+                storage: BotkitStorage({mongoUri: process.env.MONGODB_URI}),
             };
         } else {
             config = {
