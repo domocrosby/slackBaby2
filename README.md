@@ -16,7 +16,7 @@ Setup
 - to push to staging use "npm run stage-git"
 
 TODO
-
+- solve git ID problem
 - Do some interesting stuff
 
 - Create production app from script
