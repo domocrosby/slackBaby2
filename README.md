@@ -16,8 +16,6 @@ Mongodb
 - to push to staging use "npm run stage-git"
 
 TODO
-- setup mongo on staging
-- Setup mongoDB in scripts as if it is the default option
 - test setup in new doc
 - Do some interesting stuff
 - 
