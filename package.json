@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mongod & nodemon index.js",
     "git": "echo 'Enter commit message and press [ENTER]: ' && read ID && git add . && git commit -m '$ID' && git push origin master",
-    "git-stage": "npm run git && git push heroku master",
+    "git-stage": "git push heroku master && open http://$USER-${PWD##*/}-staging.herokuapp.com/login",
     "--SETUP--": "-----",
     "setup-dev":"npm run dev-app && npm run dev-env && npm run dev-auth",
     "setup-staging": "npm run staging-app && npm run staging-env && npm run staging-auth",
