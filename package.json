@@ -8,6 +8,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mongod & nodemon index.js",
+    "stage": "open http://$USER-${PWD##*/}-staging.herokuapp.com/login",
     "git": "echo 'Enter commit message and press [ENTER]: ' && read ID && git add . && git commit -m '$ID' && git push origin master",
     "git-stage": "git push heroku master && open http://$USER-${PWD##*/}-staging.herokuapp.com/login",
     "--SETUP--": "-----",
