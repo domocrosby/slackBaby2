@@ -21,7 +21,7 @@
     "staging-app": "echo http://$USER-${PWD##*/}-staging.herokuapp.com/oauth | pbcopy && heroku create $USER-${PWD##*/}-staging && open https://api.slack.com/apps/new ",
     "staging-env": "npm run setup-bot && npm run MONGO-staging && npm run CLIENT_ID-staging && npm run CLIENT_SECRET-staging ",
     "staging-auth": "git push heroku master && open http://$USER-${PWD##*/}-staging.herokuapp.com/login",
-    "setup-bot": "echo 'paste Redirect URL and create Bot then press [ENTER]:",
+    "setup-bot": "echo 'paste Redirect URL and create Bot then press [ENTER]:'",
     "CLIENT_ID": "echo 'Enter the apps CLIENT_ID and press [ENTER]: ' && read ID && echo 'CLIENT_ID='$ID > .env",
     "CLIENT_SECRET": "echo 'Enter the apps CLIENT_SECRET and press [ENTER]: ' && read ID && echo 'CLIENT_SECRET='$ID >> .env",
     "PORT": "echo 'PORT=8765' >> .env",

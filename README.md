@@ -7,7 +7,7 @@ Installation
 - give permissions using sudo chown -R `id -un` /data/db
 
 Setup
-- Just Fork and clone this repository (if owner then copy and change remote)\
+- Just Fork and clone this repository (if owner then copy and change remote)\ https://help.github.com/articles/duplicating-a-repository/
 - Change repository name to the name of the app 
 - To setup a new dev app run "npm run setup-dev"
 - To develop the app run "npm run dev"
@@ -16,8 +16,8 @@ Setup
 - to push to staging use "npm run stage-git"
 
 TODO
-- solve git ID problem
-- Do some interesting stuff
+- Store questions and answers for each user (add)
+- Search questions (any other question)
 
 - Create production app from script
 - Auto pull production mongoDB into staging and 
